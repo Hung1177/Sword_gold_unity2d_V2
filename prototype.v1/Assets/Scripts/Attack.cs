@@ -4,10 +4,10 @@ public class Attack : MonoBehaviour
 {
     public int attackDamage = 10;
     public Vector2 knokback = Vector2.zero;
-
+    public string targetTag = "Enemy";
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(targetTag))
         {
             Damageable damageable = other.GetComponent<Damageable>();
             if (damageable != null)

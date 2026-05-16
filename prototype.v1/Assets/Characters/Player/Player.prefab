@@ -1,5 +1,122 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &484288929071532748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4659109965250914675}
+  - component: {fileID: 9058742283226424608}
+  - component: {fileID: 5930927936246893184}
+  m_Layer: 9
+  m_Name: SwordAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4659109965250914675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484288929071532748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4725602388064355259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9058742283226424608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484288929071532748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcfee03bf195b54788dac9c7d242dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attack
+  attackDamage: 20
+  knokback: {x: 3, y: 1}
+  targetTag: Enemy
+--- !u!60 &5930927936246893184
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484288929071532748}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3676979, y: 0.45458087}
+      - {x: -0.13406378, y: 0.7138182}
+      - {x: -1.0307484, y: 0.85600215}
+      - {x: -0.23089051, y: 0.44539246}
+      - {x: -0.025853693, y: 0.26072726}
+      - {x: -0.023135155, y: 0.12730423}
+      - {x: -0.17904365, y: 0.0012081265}
+      - {x: -0.35798803, y: -0.08381538}
+      - {x: -0.6388651, y: -0.058571488}
+      - {x: -1.232787, y: 0.0031226873}
+      - {x: -1.6102097, y: 0.3775692}
+      - {x: -1.7897449, y: 0.40988657}
+      - {x: -1.9091539, y: 0.68202305}
+      - {x: -2.447883, y: 0.7755887}
+      - {x: -2.2363946, y: 0.28650162}
+      - {x: -1.5188351, y: -0.26334274}
+      - {x: -0.7612011, y: -0.43089277}
+      - {x: -0.04382062, y: -0.45785916}
+      - {x: 0.04356581, y: -0.41233858}
+      - {x: 0.2847656, y: -0.32061872}
+      - {x: 0.4110924, y: -0.13306406}
+      - {x: 0.4698844, y: 0.15291084}
+  m_UseDelaunayMesh: 0
 --- !u!1 &6039702698980900648
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,7 +153,8 @@ Transform:
   m_LocalPosition: {x: 2.75389, y: -0.75876, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4659109965250914675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8319466752528273303
@@ -404,4 +522,4 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   isInvincible: 0
-  invincibilityTime: 0.25
+  invincibilityTime: 1

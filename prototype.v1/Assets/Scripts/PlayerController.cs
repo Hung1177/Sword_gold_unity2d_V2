@@ -100,6 +100,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool LockVelocity { get { 
+            return animator.GetBool(AnimationStrings.lockVelocity);
+        } 
+        set
+        {
+            animator.SetBool(AnimationStrings.lockVelocity, value);
+        }
+    }
+
     Rigidbody2D rb;
     Animator animator;
     private void Awake()
@@ -111,7 +120,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!damageable.IsHit)
+        if (!damageable.LockVelocity)
         {
             rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
         }
@@ -177,7 +186,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnHit(int damage, Vector2 knockback)
     {
-        // Handle the player being hit
+        
         rb.linearVelocity = new Vector2(knockback.x , rb.linearVelocity.y + knockback.y);
     }
 }

@@ -245,6 +245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59578cf4cf24f474d8614be3497a215e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damageable
+  damagableHit:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 100
   _health: 100
   _isAlive: 1
@@ -277,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 3935317259277779590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -329,16 +332,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 3.2790146, y: 0.92782044}
-      - {x: 2.4852962, y: 1.4370371}
-      - {x: 1.3945079, y: 0.85506475}
-      - {x: 1.9354854, y: 0.46743196}
-      - {x: 2.0752196, y: 0.21604112}
-      - {x: 2.1806026, y: -0.10446274}
-      - {x: 1.7877803, y: -0.5550256}
-      - {x: 3.3891597, y: -1.0854194}
-      - {x: 3.7183185, y: -0.5568953}
-      - {x: 3.696404, y: 0.09027195}
+    - - {x: 0.7947264, y: 0.5207311}
+      - {x: 0.1784563, y: 1.155206}
+      - {x: -1.2672305, y: 0.77155924}
+      - {x: -0.59055567, y: 0.20647728}
+      - {x: -0.5656419, y: -0.12841901}
+      - {x: -0.92997694, y: -0.51155204}
+      - {x: 0.62914133, y: -1.087373}
+      - {x: 1.009253, y: -0.4069373}
+      - {x: 0.9626365, y: -0.4316371}
+      - {x: 0.91984606, y: 0.09027195}
   m_UseDelaunayMesh: 1
 --- !u!114 &8625362311809363837
 MonoBehaviour:
@@ -353,6 +356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   attackDamage: 10
+  knokback: {x: 5, y: 2}
+  targetTag: Enemy
 --- !u!1 &5537391549028247924
 GameObject:
   m_ObjectHideFlags: 0
